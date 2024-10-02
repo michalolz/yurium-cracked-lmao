@@ -1,7 +1,6 @@
 getgenv().key = ''
-local funcs = {}
 
-local function set(a)
+local function Set(a)
     print(a)
     getgenv().key = a.trueData
 end
@@ -20,6 +19,4 @@ local function getLink(...)
     return getgenv().key
 end
 
-return set, validatePremiumKey, validateDefaultkey ,getLink
-
--- @michapro420 on dc
+return Set, validatePremiumKey, validateDefaultkey ,getLink
