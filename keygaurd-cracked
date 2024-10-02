@@ -1,0 +1,23 @@
+getgenv().key = ''
+local funcs = {}
+
+local function set(a)
+    print(a)
+    getgenv().key = a.trueData
+end
+
+local function validatePremiumKey(...)
+    print(...)
+    return getgenv().key
+end
+
+local function validateDefaultkey(...)
+    print(...)
+    return getgenv().key
+end
+
+local function getLink(...)
+    return getgenv().key
+end
+
+return set, validatePremiumKey, validateDefaultkey ,getLink
