@@ -1,22 +1,22 @@
 getgenv().key = ''
 local funcs = {}
 
-local function funcs.Set(a)
+function funcs.Set(a)
     print(a)
     getgenv().key = a.trueData
 end
 
-local function funcs.validatePremiumKey(...)
+function funcs.validatePremiumKey(...)
     print(...)
     return getgenv().key
 end
 
-local function funcs.validateDefaultkey(...)
+function funcs.validateDefaultkey(...)
     print(...)
     return getgenv().key
 end
 
-local function funcs.getLink(...)
+function funcs.getLink(...)
     return getgenv().key
 end
 
