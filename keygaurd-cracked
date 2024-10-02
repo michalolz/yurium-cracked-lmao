@@ -11,7 +11,7 @@ function funcs.validatePremiumKey(...)
     return getgenv().key
 end
 
-function funcs.validateDefaultkey(...)
+function funcs.validateDefaultKey(...)
     print(...)
     return getgenv().key
 end
