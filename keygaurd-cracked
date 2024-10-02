@@ -1,23 +1,29 @@
 getgenv().key = ''
 local funcs = {}
 
+-- Set function
 function funcs.Set(a)
     print(a)
     getgenv().key = a.trueData
 end
 
-function funcs.validatePremiumKey(...)
-    print(...)
-    return getgenv().key
-end
-
+-- Renamed function to match the one in the main script
 function funcs.validateDefaultKey(...)
     print(...)
     return getgenv().key
 end
 
+-- Renamed function to match the one in the main script
+function funcs.validatePremiumKey(...)
+    print(...)
+    return getgenv().key
+end
+
+-- Get Link function
 function funcs.getLink(...)
     return getgenv().key
 end
 
+-- Return the table of functions
 return funcs
+
